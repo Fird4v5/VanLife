@@ -21,7 +21,7 @@
     border-radius: 5px; 
     font-family: "Inter", sans-serif;
     font-weight: 500;
-    font-size: 0.7rem; 
+    font-size: 0.8rem; 
     padding: 0.3rem 0.8rem; 
     cursor: pointer; 
 }
@@ -50,7 +50,7 @@
     text-decoration: underline;
     font-family: "Inter", sans-serif;
     font-weight: 500;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
 }
 
 .vans-list {
@@ -75,7 +75,7 @@
 
 .van-title {
     grid-column: span 2; 
-    font-size: 0.9rem; 
+    font-size: 1rem; 
 }
 
 .van-price {
@@ -86,20 +86,21 @@
 }
 
 .van-price span:first-of-type {
-    font-size: 0.9rem; 
+    font-size: 1rem; 
     font-weight: 700;
 }
 
 .van-price span:nth-child(2) {
-    font-size: 0.7rem; 
+    font-size: 0.8rem; 
     font-weight: 500;
 }
 
 .van-type {
-    font-size: 0.8rem; 
+    font-size: 0.9rem; 
     font-weight: 600;
     padding: 0.3rem 0.8rem; 
     border-radius: 5px;
+    text-align: center;
 }
 
 .simple {
