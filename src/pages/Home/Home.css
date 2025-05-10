@@ -3,7 +3,7 @@
 .home-page {
     flex: 1;
     color: #fff;
-    background-image: url(/src/assets/backgroundHome.png);
+    background-image: url(/src/assets/home-hero.png);
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;

@@ -1,6 +1,6 @@
 import Navbar from "../../components/Navbar/Navbar"
 import "./About.css"
-import van from "../../assets/van.png"
+import van from "../../assets/about-hero.png"
 import Footer from "../../components/Footer/Footer"
 
 
