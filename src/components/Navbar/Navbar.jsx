@@ -11,7 +11,8 @@ const Navbar = () => {
         <img src={logo} alt="#Vanlife logo"/>
         <ul className='nav-list'>
             <li className='nav-item'><Link to={"/"}>Home</Link></li>
-            <li className='nav-item'><Link to={"/About"}>About</Link></li>
+            <li className='nav-item'><Link to={"/about"}>About</Link></li>
+            <li className='nav-item'><Link to={"/vans"}>Vans</Link></li>
         </ul>
     </nav>
     </header>
