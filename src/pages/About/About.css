@@ -1,7 +1,5 @@
 .about-page {
     max-width: 800px; 
-    flex-grow: 1; 
-    color: #161616;
     padding: 2rem; 
     display: flex;
     flex-direction: column;
