@@ -1,0 +1,36 @@
+.nav {
+  width: 100%;
+  background-color: #FFF7ED;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem; 
+}
+
+.nav-list {
+  display: flex;
+  gap: 1rem; 
+}
+
+.nav-item {
+  list-style-type: none;
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: #4D4D4D; 
+  font-size: 0.8rem; 
+  font-weight: 600;
+}
+
+.nav-item a:hover,
+.nav-item a:focus {
+  text-decoration: underline;
+  color: #161616;
+}
+
+.nav img {
+  width: clamp(80px, 20vw, 180px);
+  height: auto; 
+  object-fit: contain;
+}
+

@@ -1,0 +1,55 @@
+.about-page {
+    max-width: 800px; 
+    flex-grow: 1; 
+    color: #161616;
+    padding: 2rem; 
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-inline: auto; 
+}
+
+.about-page img {
+    width: 100%;
+}
+
+.about-page-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.about-page-text h1 {
+    font-size: 1.3rem; 
+    margin-bottom: 1rem;
+}
+
+.about-page-text p {
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.van-list-direction {
+    background-color: #FFCC8D;
+    margin-top: 1rem; 
+    padding: 1.5rem; 
+    border-radius: 5px;
+    
+}
+
+.van-list-direction h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem; 
+}
+
+.van-list-direction button {
+    background-color: #161616;
+    color: #fff; 
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 0.8rem; 
+    border: none; 
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 0.6rem 1rem;
+}
