@@ -1,7 +1,5 @@
 import { createServer, Model } from "miragejs";
 
-import { createServer, Model } from "miragejs"
-
 
 createServer({
     models: {
