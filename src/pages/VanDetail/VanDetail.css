@@ -1,0 +1,79 @@
+.van-details-page {
+    display: flex;
+    flex-wrap: wrap-reverse; 
+    justify-content: center;
+    padding: 2rem; 
+    gap: 1rem; 
+}
+
+.left-arrow {
+    color: #858585; 
+}
+
+.back-to-vans-btn {
+    background-color: transparent;
+    border: none;
+    display: flex;
+    gap: 0.5rem; 
+    align-items: center;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 0.9rem; 
+    color: #201F1D; 
+    text-decoration: underline;
+    cursor: pointer; 
+}
+.back-link {
+    color: #201F1D;
+}
+
+@media (min-width: 762px) {
+    .back-to-vans-btn {
+        align-self: flex-end;
+    }
+}
+
+.van-detail-container {
+    max-width: 500px; 
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; 
+}
+
+.van-detail-img {
+    width: 100%; 
+    border-radius: 5px;
+}
+
+/* Van type is getting the same style as the VanList page */
+
+.van-detail-name {
+    font-size: 1.5rem;
+
+}
+
+.van-detail-price {
+    font-size: 1.2rem; 
+    font-weight: 700; 
+}
+
+.van-detail-price small {
+    font-size: 1rem; 
+    font-weight: 500; 
+}
+
+.van-detail-description {
+    font-size: 1rem;
+    font-weight: 500; 
+}
+/* 
+rent van btn (orange-btn) is getting the same style that the home page has */
+
+.loading {
+    margin-top: 10rem;
+}
+
+
+
+
+

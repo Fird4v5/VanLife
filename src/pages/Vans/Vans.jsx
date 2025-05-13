@@ -1,16 +1,14 @@
 import React from 'react'
-import Navbar from '../../components/Navbar/Navbar'
-import Footer from '../../components/Footer/Footer'
 import "./Vans.css"
+import { Link } from 'react-router-dom'
 
 const Vans = () => {
 
 const [vans, setVans] = React.useState(null); 
-console.log(vans)
 
 React.useEffect(() => {
 
-    const fetchData = async () => {
+    const fetchVans = async () => {
         try {
             const response = await fetch("/api/vans");
             if (!response.ok) throw new Error("Network response was not ok");  
@@ -21,14 +19,30 @@ React.useEffect(() => {
         }
     }
 
-    fetchData(); 
+    fetchVans(); 
     
 }, []) 
 
 
+const vanElements = vans && vans.map(van => (
+    <Link key={van.id}  className='detail-route' to={`/vans/${van.id}`}>
+    <div className="van">
+        <img src={van.imageUrl} alt={`Van ${van.name}`} className='van-img'/>
+
+        <h2 className='van-title'>{van.name}</h2>
+        <p className='van-price'>
+            <span>{`$${van.price}`}</span>
+            <span>/day</span>
+        </p>
+        <p className={`van-type ${van.type}`}>
+            {van.type}
+        </p>
+    </div>
+    </Link>
+));
+
+
   return (
-    <>
-    <Navbar/>
     <main className='vans-page'>
     <h1>Explore our van options</h1>
     <div className="filters-container">
@@ -38,28 +52,9 @@ React.useEffect(() => {
         <button className='clear-btn'>Clear filters</button>
     </div>
     <section className='vans-list'>
-        {vans &&
-            vans.map(van => (
-                <div key={van.id} className="van">
-                    <img src={van.imageUrl} alt={`Van ${van.name}`} className='van-img'/>
-                    <h2 className='van-title'>{van.name}</h2>
-                    <p className='van-price'>
-                        <span>
-                            {`$${van.price}`}
-                        </span>
-                        <span>
-                            /day
-                        </span>
-                    </p>
-                    <p className={`van-type ${van.type}`}>
-                        {van.type}
-                    </p>
-                </div>
-            ))}
+        {vanElements}
     </section>
     </main>
-    <Footer/>
-    </>
   )
 }
 

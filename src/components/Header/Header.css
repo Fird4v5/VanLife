@@ -3,6 +3,7 @@
   background-color: #FFF7ED;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 1.5rem; 
 }
 
@@ -11,19 +12,20 @@
   gap: 1rem; 
 }
 
-.nav-item {
+.nav-list li {
   list-style-type: none;
 }
 
-.nav-item a {
+.nav-link {
   text-decoration: none;
   color: #4D4D4D; 
   font-size: 0.9rem; 
   font-weight: 600;
 }
 
-.nav-item a:hover,
-.nav-item a:focus {
+.nav-link:hover,
+.nav-link:focus,
+.nav-link.active  {
   text-decoration: underline;
   color: #161616;
 }

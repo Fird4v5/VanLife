@@ -1,13 +1,9 @@
-import Navbar from "../../components/Navbar/Navbar"
 import "./About.css"
 import van from "../../assets/about-hero.png"
-import Footer from "../../components/Footer/Footer"
 
 
 const About = () => {
   return (
-    <>
-      <Navbar/>
       <main className="about-page">
         <img src={van} alt="van with a man sitting on top at night"/>
         <div className="about-page-text">
@@ -28,8 +24,6 @@ const About = () => {
           </div>
         </div>
       </main>
-      <Footer/>
-    </>
   )
 }
 
