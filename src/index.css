@@ -29,3 +29,30 @@ body {
 main {
   flex-grow: 1; 
 }
+
+.loading {
+    margin-top: 10rem;
+}
+
+.van-type {
+    width: 80px; 
+    font-size: 0.9rem; 
+    font-weight: 600;
+    padding: 0.5rem 0.8rem; 
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.orange-btn {
+    font-family: "Inter", sans-serif;
+    font-weight: 700; 
+    font-size: 1rem;
+    background-color: #FF8C38;
+    color: #fff; 
+    border: none;
+    border-radius: 5px;
+    padding: 0.8rem 0.5rem; 
+    cursor: pointer;
+}

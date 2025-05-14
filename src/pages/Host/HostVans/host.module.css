@@ -1,0 +1,139 @@
+
+
+/* 
+HOST/VANS page below */
+
+.hostVansPage {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; 
+    align-items: center;
+    padding: 1rem; 
+} 
+
+
+.hostVansPageTitle {
+    font-size: 1.5rem;
+}
+
+.hostVan {
+    max-width: 500px;
+    display: flex;
+    gap: 1rem; 
+    background-color: #fff;
+    border-radius: 6px;
+    padding: 1rem; 
+}
+
+/* shared css above */
+
+.hostVanImg {
+    width: 20%;
+    border-radius: 5px; 
+}
+
+
+.hostVanName {
+    font-size: 1rem; 
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.hostVanPrice {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #4D4D4D; 
+}
+
+
+.hostVanLink {
+    text-decoration: none;
+    color: #161616;
+}
+
+
+
+/* 
+HOST/VANS/DETAIL page below */
+
+.vanDetailWrapper {
+    flex-grow: 1; 
+    display: flex;
+    flex-wrap: wrap-reverse; 
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.hostVansDetailPage {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; 
+    background-color: #fff;
+    border-radius: 6px;
+    padding: 1rem;
+}
+
+.vanDetail {
+    display: flex;
+    gap: 1rem; 
+}
+
+
+.vanDetailImg {
+    width: 40%;
+    border-radius: 5px; 
+}
+
+.vanDetailInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem; 
+}
+
+/* Van Type is getting the universal style from index.css */
+
+.vanDetailName {
+    font-size: 1.3rem; 
+    margin-top: 0.5rem; 
+}
+
+.vanDetailPrice {
+    font-size: 1.1rem; 
+    font-weight: 700; 
+}
+
+.vanDetailPrice small {
+    font-weight: 500;
+}
+
+
+/* vanDetail navbar is getting the same style from header navbar except below style */
+
+.vanDetailNavList {
+    margin-left: -1.5rem; 
+}
+
+
+/* HostVanInfo below */
+
+
+.infoSection {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; 
+    font-size: 0.850rem; 
+}
+
+.infoSection p {
+    font-weight: 500; 
+}
+
+/* HostVanPhotos below */
+
+.photosSection img {
+    width: 25%; 
+    border-radius: 5px;
+}

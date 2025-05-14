@@ -1,6 +1,5 @@
 .nav {
   width: 100%;
-  background-color: #FFF7ED;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -9,7 +8,7 @@
 
 .nav-list {
   display: flex;
-  gap: 1rem; 
+  gap: 1.5rem; 
 }
 
 .nav-list li {

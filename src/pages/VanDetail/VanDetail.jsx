@@ -27,7 +27,7 @@ React.useEffect(() => {
   return (
     <>
     <main className="van-details-page">
-        <Link className="back-link" to={"/vans"}>
+        <Link className="back-link" to={".."} relative="path">
         <button className="back-to-vans-btn">
         <FaArrowLeftLong className="left-arrow"/>
         Back to all vans
@@ -35,7 +35,7 @@ React.useEffect(() => {
         </Link>
         { van ?
         <div className="van-detail-container"> 
-            <img className="van-detail-img" src={van.imageUrl} alt={`Van ${van.name}`} />
+            <img className="van-detail-img" src={van.imageUrl} alt={van.name} />
             <p className={`van-type ${van.type}`}>{van.type}</p>
             <h1 className="van-detail-name">{van.name}</h1>
             <p className="van-detail-price">{`$${van.price}`}<small>/day</small></p>

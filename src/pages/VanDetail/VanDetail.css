@@ -45,7 +45,7 @@
     border-radius: 5px;
 }
 
-/* Van type is getting the same style as the VanList page */
+/* Van type is getting the universal style from index.css */
 
 .van-detail-name {
     font-size: 1.5rem;
@@ -67,11 +67,9 @@
     font-weight: 500; 
 }
 /* 
-rent van btn (orange-btn) is getting the same style that the home page has */
+rent van btn (orange-btn) is getting the universal orange-btn style from index.css*/
 
-.loading {
-    margin-top: 10rem;
-}
+
 
 
 

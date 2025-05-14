@@ -25,9 +25,9 @@ React.useEffect(() => {
 
 
 const vanElements = vans && vans.map(van => (
-    <Link key={van.id}  className='detail-route' to={`/vans/${van.id}`}>
+    <Link key={van.id}  className='van-link' to={`/vans/${van.id}`}>
     <div className="van">
-        <img src={van.imageUrl} alt={`Van ${van.name}`} className='van-img'/>
+        <img src={van.imageUrl} alt={van.name} className='van-img'/>
 
         <h2 className='van-title'>{van.name}</h2>
         <p className='van-price'>
