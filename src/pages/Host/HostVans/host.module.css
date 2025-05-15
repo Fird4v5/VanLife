@@ -137,3 +137,14 @@ HOST/VANS/DETAIL page below */
     width: 25%; 
     border-radius: 5px;
 }
+
+/* HostVanPricing below */
+
+.pricingSection p {
+    font-size: 1.5rem;
+    font-weight: 500;  
+}
+
+.pricingSection p small {
+    color: #4D4D4D; 
+}

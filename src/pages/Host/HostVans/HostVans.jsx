@@ -24,7 +24,7 @@ React.useEffect(() => {
 }, []) 
 
 const hostVanEls = hostVans ? hostVans.map(hostVan => (
-    <Link to={`/host/vans/${hostVan.id}`} key={hostVan.id} className={styles.hostVanLink}>
+    <Link to={hostVan.id} key={hostVan.id} className={styles.hostVanLink}>
         <div className={styles.hostVan}>
             <img className={styles.hostVanImg} src={hostVan.imageUrl} alt={hostVan.name} />
             <div className='hostVanInfo'>

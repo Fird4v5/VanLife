@@ -27,17 +27,20 @@
 }
 
 .simple-type:hover,
-.simple-type:focus {
+.simple-type:focus,
+.simple-type.selected {
     background-color: #E17654;
     color: #FFEAD0;
 }
 .luxury-type:hover,
-.luxury-type:focus {
+.luxury-type:focus,
+.luxury-type.selected {
     background-color: #161616;
     color: #FFEAD0;
 }
 .rugged-type:hover,
-.rugged-type:focus {
+.rugged-type:focus,
+.rugged-type.selected {
     background-color: #115E59;
     color: #FFEAD0;
 }

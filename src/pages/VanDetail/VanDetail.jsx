@@ -1,5 +1,5 @@
 import React from "react"
-import { useParams, Link } from "react-router-dom"
+import { useParams, Link, useLocation } from "react-router-dom"
 import { FaArrowLeftLong } from "react-icons/fa6";
 import "./VanDetail.css"
 
@@ -7,6 +7,7 @@ const VanDetail = () => {
 
 const [van, setVan] = React.useState(); 
 const params = useParams(); 
+const location = useLocation(); 
 
 React.useEffect(() => {
     const fetchVanDetails = async () => {
@@ -23,14 +24,16 @@ React.useEffect(() => {
 
 }, [params.id])
 
+const search = location.state?.search || "";
+const type = location.state?.type || "all"; 
 
   return (
     <>
     <main className="van-details-page">
-        <Link className="back-link" to={".."} relative="path">
+        <Link className="back-link" to={`..${search}`} relative="path">
         <button className="back-to-vans-btn">
         <FaArrowLeftLong className="left-arrow"/>
-        Back to all vans
+        Back to {type} vans
         </button>
         </Link>
         { van ?

@@ -11,9 +11,9 @@ const Navbar = () => {
     <nav className='nav'>
         <Link to={"/"}><img src={logo} alt="#Vanlife logo"/></Link>
         <ul className='nav-list'>
-            <li><NavLink to={"/about"} className={navLinkStyle}>About</NavLink></li>
-            <li><NavLink to={"/vans"} className={navLinkStyle}>Vans</NavLink></li>
-            <li><NavLink to={"/host"} className={navLinkStyle}>Host</NavLink></li>
+            <li><NavLink to={"about"} className={navLinkStyle}>About</NavLink></li>
+            <li><NavLink to={"vans"} className={navLinkStyle}>Vans</NavLink></li>
+            <li><NavLink to={"host"} className={navLinkStyle}>Host</NavLink></li>
         </ul>
     </nav>
     </header>

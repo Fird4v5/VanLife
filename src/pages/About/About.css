@@ -9,6 +9,7 @@
 
 .about-page img {
     width: 100%;
+    border-radius: 5px;
 }
 
 .about-page-text {
