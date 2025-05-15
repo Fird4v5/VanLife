@@ -46,6 +46,7 @@ main {
 }
 
 .orange-btn {
+    width: 100%;
     font-family: "Inter", sans-serif;
     font-weight: 700; 
     font-size: 1rem;
@@ -56,3 +57,33 @@ main {
     padding: 0.8rem 0.5rem; 
     cursor: pointer;
 }
+
+
+
+/* 404 Page style below */
+
+.notFound-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.notFound-container {
+  max-width: 600px; 
+}
+
+.notFound-container button {
+  width: 100%; 
+  background-color: #161616;
+  color: #fff; 
+  border: none; 
+  border-radius: 5px;
+  padding: 0.8rem 0.5rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  margin-top: 1rem; 
+  cursor: pointer;
+}
+
+/* 404 Page style above */
