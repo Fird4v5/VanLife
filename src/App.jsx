@@ -15,6 +15,7 @@ import HostVanDetail from './pages/Host/HostVans/HostVanDetail'
 import HostVanInfo from './pages/Host/HostVans/HostVanInfo'
 import HostVanPricing from './pages/Host/HostVans/HostVanPricing'
 import HostVanPhotos from './pages/Host/HostVans/HostVanPhotos';
+import ScrollToTop from './components/ScrollToTop';
 
 
 
@@ -23,6 +24,7 @@ function App() {
   return (
     <div className='wrapper'>
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route path='/' element={<Layout/>}>
 

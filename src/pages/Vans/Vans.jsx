@@ -1,30 +1,19 @@
 import React from 'react'
 import "./Vans.css"
 import { Link, useSearchParams } from 'react-router-dom'
+import { getVans } from '../../api'
+import { useQuery } from '@tanstack/react-query'
 
 const Vans = () => {
-
-const [vans, setVans] = React.useState(null); 
 const [searchParams, setSearchParams] = useSearchParams(); 
 
 const typeFilter = searchParams.get("type")
 
-React.useEffect(() => {
+const { data: vans, isLoading, error } = useQuery({
+    queryKey: ["vans"],
+    queryFn: getVans
+});
 
-    const fetchVans = async () => {
-        try {
-            const response = await fetch("/api/vans");
-            if (!response.ok) throw new Error("Network response was not ok");  
-            const data = await response.json()
-            setVans(data.vans);  
-        } catch(err) {
-            console.error("Fetch error:", err); 
-        }
-    }
-
-    fetchVans(); 
-    
-}, []) 
 
 const filteredVans = typeFilter &&
                      vans ? vans.filter(van => van.type === typeFilter) :
@@ -66,8 +55,13 @@ const handleFilterChange = (key, value) => {
 }); 
 }
 
+const loadingDisplay = isLoading && <h1 className='loading' aria-label='polite'>Loading...</h1>;
+const errorDisplay = error && <h1 className='loading' aria-label='assertive'>There was a fetch error: {error.message}</h1>;
+
+
   return (
     <main className='vans-page'>
+
     <h1>Explore our van options</h1>
     <div className="filters-container">
         <button className={`btn simple-type ${typeFilter === "simple" ? "selected" : ""}`}
@@ -91,6 +85,11 @@ const handleFilterChange = (key, value) => {
         </button>
         }
     </div>
+
+        
+    {loadingDisplay}
+    {errorDisplay}
+
     <section className='vans-list'>
         {vanElements}
     </section>
