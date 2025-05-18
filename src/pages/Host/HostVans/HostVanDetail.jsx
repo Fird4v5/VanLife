@@ -2,14 +2,10 @@ import React from 'react'
 import { useParams, Link, NavLink, Outlet } from 'react-router-dom'
 import { FaArrowLeftLong } from "react-icons/fa6";
 import { useQuery } from '@tanstack/react-query';
+import { getVan } from '../../../api';
 import styles from "./host.module.css"
 
-const fetchVanDetail = async (id) => {
-  const res = await fetch(`/api/host/vans/${id}`)
-  if (!res.ok) throw new Error("Failed to fetch host van details")
-  const data = await res.json(); 
-  return data.vans
-}
+
 
 const HostVanDetail = () => {
 
@@ -17,7 +13,7 @@ const HostVanDetail = () => {
 
   const { data: vanDetail, isLoading, error } = useQuery({
     queryKey: ["vanDetail", id], 
-    queryFn: () => fetchVanDetail(id)
+    queryFn: () => getVan(id)
   })
 
   const vanDetailEls = vanDetail &&

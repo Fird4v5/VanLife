@@ -2,14 +2,8 @@ import React from "react"
 import { useParams, Link, useLocation } from "react-router-dom"
 import { FaArrowLeftLong } from "react-icons/fa6";
 import { useQuery } from "@tanstack/react-query";
+import { getVan } from "../../api";
 import "./VanDetail.css"
-
-const fetchVanDetail = async (id) => {
-    const res = await fetch (`/api/vans/${id}`)
-    if (!res.ok) throw new Error ("Failded to fetch van detail")
-    const data = await res.json(); 
-    return data.vans
-}
 
 const VanDetail = () => {
 
@@ -18,7 +12,7 @@ const location = useLocation();
 
 const {data: van, isLoading, error} = useQuery({
     queryKey: ["van", params.id],
-    queryFn: () => fetchVanDetail(params.id)
+    queryFn: () => getVan(params.id)
 })
 
 

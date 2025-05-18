@@ -35,3 +35,9 @@
   object-fit: contain;
 }
 
+
+
+.login img {
+  width: clamp(10px, 4.1vw, 25px)
+}
+

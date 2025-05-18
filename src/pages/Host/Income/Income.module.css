@@ -1,0 +1,12 @@
+.incomePage {
+    display: flex;
+    justify-content: center;
+}
+
+.barChart {
+    max-width: 500px;
+    height: 400px; 
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; 
+}

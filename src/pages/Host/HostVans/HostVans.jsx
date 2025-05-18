@@ -1,22 +1,15 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { useQuery } from '@tanstack/react-query'
+import { getHostVans } from '../../../api'
 import styles from "./host.module.css"
-
-
-const fetchHostVans = async () => {
-    const res = await fetch('/api/host/vans')
-    if (!res.ok) throw new Error("Failed to fetch host vans")
-    const data = await res.json()
-    return data.vans
-}
 
 
 const HostVans = () => {
 
 const { data: hostVans, isLoading, error } = useQuery({
     queryKey: ["hostVans"],
-    queryFn: () => fetchHostVans()
+    queryFn: () => getHostVans()
 })
 
 const hostVanEls = hostVans && hostVans.map(hostVan => (
