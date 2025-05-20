@@ -5,22 +5,21 @@ import { useMutation } from '@tanstack/react-query'
 import { useLocation, useNavigate } from 'react-router-dom'
 
 const Login = () => {
-
-const [loginFormData, setLoginFormData] = React.useState({
+  const [isSignup, setIsSignup] = React.useState(false); 
+  const [loginFormData, setLoginFormData] = React.useState({
   email: "",
   password: ""
-})
+  })
 
 const navigate = useNavigate(); 
 const location = useLocation(); 
-
 const redirectPath = location.state?.from?.pathname || "/host"
 
 const mutation = useMutation({
-  mutationFn: loginUser,
+  mutationFn: (data) => loginUser({ ...data, isSignup}),
   onSuccess: (data) => {
-    console.log(data);
-    navigate(redirectPath, {replace: true})
+    console.log("User logged in/signed up:", data);
+    navigate(redirectPath, { replace: true })
   },
   onError: (error) => {
     console.error(error)
@@ -50,7 +49,7 @@ const handleChange = (e) => {
       <h3 className={styles.loginError}>{location.state.message}</h3>
     }
 
-    <h1>Sign in to your account</h1>
+    <h1>{isSignup ? "Create an account" : "Sign in to your account"}</h1>
 
     {mutation.isError && (
       <h3 className={styles.loginError}>
@@ -64,19 +63,36 @@ const handleChange = (e) => {
         placeholder='Email address'
         value={loginFormData.email}
         name='email'
-        onChange={handleChange}/>
+        onChange={handleChange}
+        required
+      />
       <input
         type='password'
         placeholder='Password'
         value={loginFormData.password}
         name='password'
-        onChange={handleChange}/>
+        onChange={handleChange}
+        required
+      />
       <button 
       className='orange-btn' 
       disabled={mutation.isLoading}>
-        {mutation.isLoading ? "Logging in..." : "Log in"}
+        {mutation.isLoading ? 
+        (isSignup ? 
+        "Signing up..." : "Logging in...") :
+        (isSignup ? "Sign Up" : "Log in")}
       </button>
     </form>
+
+    <p>
+      {isSignup ? "Already have an account" : "Don't have an account?"}{" "}
+      <button
+        type='button'
+        onClick={() => setIsSignup(!isSignup)}
+      >
+        {isSignup ? "Log in" : "Sign up"}
+      </button>
+    </p>
     </main>
   )
 }
