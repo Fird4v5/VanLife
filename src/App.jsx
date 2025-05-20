@@ -6,7 +6,6 @@ import Vans from './pages/Vans/Vans';
 import Login from './pages/Login/Login';
 import NotFound from './pages/NotFound';
 import VanDetail from './pages/VanDetail/VanDetail';
-import "./server"
 import Layout from './components/Layout';
 
 import HostLayout from './components/HostLayout/HostLayout'
