@@ -25,5 +25,5 @@ dist-ssr
 
 
 
-src/api.js
+
 src/server.js
