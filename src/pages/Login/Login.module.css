@@ -16,6 +16,7 @@
     max-width: 600px;
     display: flex;
     flex-direction: column; 
+    position: relative; 
 }
 
 .loginPage form input {
@@ -30,6 +31,7 @@
     outline: none;
 }
 
+
 .loginPage form input:first-of-type {
     border-radius: 6px 6px 0 0; 
 }
@@ -37,8 +39,19 @@
     border-radius: 0 0 6px 6px; 
 }
 
+
+
+
 .loginPage form button {
     margin-top: 1rem; 
+}
+
+.eyeIcon {
+  position: absolute;
+  right: 0.75rem;
+  top: 43%;
+  transform: translateY(-50%);
+  cursor: pointer;
 }
 
 /* Button is getting the rest of the styles from universal orange-btn style from index.css */
@@ -46,3 +59,28 @@
 .loginError {
     color: red; 
 }
+
+
+.loginCTA {
+   font-size: 1rem;  
+   font-weight: 500;
+}
+
+.loginCTA button {
+    background-color: transparent;
+    border: none; 
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-left: 0.5rem; 
+    color: #FF8C38; 
+    cursor: pointer;
+}
+
+.loginCTA button:hover,
+.loginCTA button:focus {
+    color: #e07020;
+}
+
+
+

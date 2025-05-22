@@ -4,6 +4,7 @@ import { FaArrowLeftLong } from "react-icons/fa6";
 import { useQuery } from "@tanstack/react-query";
 import { getVan } from "../../api";
 import "./VanDetail.css"
+import Spinner from "../../components/Spinner/Spinner";
 
 const VanDetail = () => {
 
@@ -19,7 +20,7 @@ const {data: van, isLoading, error} = useQuery({
 const search = location.state?.search || "";
 const type = location.state?.type || "all"; 
 
-const loadingDisplay = isLoading && <h1 className='loading' aria-live="polite">Loading...</h1>;
+const loadingDisplay = isLoading && <Spinner className='loading' />;
 const errorDisplay = error && <h1 className='loading' aria-live="assertive">There was a fetch error: {error.message}</h1>;
 
   return (

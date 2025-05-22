@@ -87,3 +87,23 @@ main {
 }
 
 /* 404 Page style above */
+
+
+
+
+.lastDays {
+    font-size: 0.9rem; 
+    font-weight: 500;
+    color: #4D4D4D; 
+}
+
+.lastDays u {
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+
+.starIcon {
+  color: #FF8C38;
+  font-size: 1.5rem;
+}

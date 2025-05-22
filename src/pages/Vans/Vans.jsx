@@ -3,6 +3,7 @@ import "./Vans.css"
 import { Link, useSearchParams } from 'react-router-dom'
 import { getVans } from '../../api'
 import { useQuery } from '@tanstack/react-query'
+import Spinner from '../../components/Spinner/Spinner'
 
 const Vans = () => {
 const [searchParams, setSearchParams] = useSearchParams(); 
@@ -55,7 +56,7 @@ const handleFilterChange = (key, value) => {
 }); 
 }
 
-const loadingDisplay = isLoading && <h1 className='loading' aria-label='polite'>Loading...</h1>;
+const loadingDisplay = isLoading && <Spinner className='loading' />;
 const errorDisplay = error && <h1 className='loading' aria-label='assertive'>There was a fetch error: {error.message}</h1>;
 
 

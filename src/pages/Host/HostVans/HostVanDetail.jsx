@@ -4,6 +4,7 @@ import { FaArrowLeftLong } from "react-icons/fa6";
 import { useQuery } from '@tanstack/react-query';
 import { getVan } from '../../../api';
 import styles from "./host.module.css"
+import Spinner from '../../../components/Spinner/Spinner';
 
 
 
@@ -38,7 +39,7 @@ const HostVanDetail = () => {
       </Link>
 
       <main className={styles.hostVansDetailPage}>
-        {isLoading && <h1 className='loading' aria-label='polite'>Loading...</h1>}
+        {isLoading && <Spinner className='loading'/>}
         {error && <h1 className='loading' aria-label='assertive'>There was a fetch error: {error.message}</h1>}
 
         {vanDetail && (

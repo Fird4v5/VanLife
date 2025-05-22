@@ -1,5 +1,6 @@
 import "./About.css"
 import van from "../../assets/about-hero.png"
+import { Link } from "react-router-dom"
 
 
 const About = () => {
@@ -20,7 +21,7 @@ const About = () => {
                 Your destination is waiting.
                 Your van is ready.
               </h2>
-              <button>Explore our vans</button>
+              <Link to="/vans"><button>Explore our vans</button></Link>
           </div>
         </div>
       </main>

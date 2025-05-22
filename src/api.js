@@ -1,7 +1,7 @@
 
 import { initializeApp } from "firebase/app";
 import { getFirestore, collection, getDocs, getDoc, doc, query, where} from "firebase/firestore/lite";
-import { createUserWithEmailAndPassword, getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, sendEmailVerification} from "firebase/auth";
 
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
@@ -14,7 +14,7 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 
-// Getting vans data below
+// 🔥 Firestore Section (Van-Related Data)
 
 const db = getFirestore(app); 
 
@@ -56,8 +56,7 @@ export const getHostVans = async () => {
 };
 
 
-// handling login below
-
+// 🔑 Firebase Authentication Logic
 
 export const auth = getAuth(app); 
 
@@ -65,9 +64,15 @@ export async function loginUser({ email, password, isSignup = false}) {
   try {
     if (isSignup) {
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+      await sendEmailVerification(userCredential.user);
       return userCredential.user; 
     } else {
       const userCredential = await signInWithEmailAndPassword(auth, email, password); 
+
+      if (!userCredential.user.emailVerified) {
+        throw new Error("Please verify your email before logging in.")
+      }
+
       return userCredential.user; 
     }
   } catch (error) {
