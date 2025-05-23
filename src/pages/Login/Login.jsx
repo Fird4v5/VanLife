@@ -52,6 +52,10 @@ const mutation = useMutation({
     if (isSignup) {
     toast.success("Account created! You can now log in")
     setIsSignup(false);
+    setLoginFormData({
+        email: "",
+        password: ""
+      });
     } else {
     navigate(redirectPath, { replace: true })
     }
@@ -66,6 +70,7 @@ const mutation = useMutation({
 const handleSubmit = (e) => {
   e.preventDefault();
   mutation.mutate(loginFormData)
+
 }
 
 const handleChange = (e) => {

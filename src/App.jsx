@@ -12,16 +12,18 @@ import VanDetail from './pages/VanDetail/VanDetail';
 import Layout from './components/Layout';
 
 import HostLayout from './components/HostLayout/HostLayout'
-import Dashboard from './pages/Host/Dashboard/Dashboard' 
-import Income from './pages/Host/Income/Income' 
-import Reviews from './pages/Host/Reviews/Reviews'
-import HostVans from './pages/Host/HostVans/HostVans'
-import HostVanDetail from './pages/Host/HostVans/HostVanDetail'
-import HostVanInfo from './pages/Host/HostVans/HostVanInfo'
-import HostVanPricing from './pages/Host/HostVans/HostVanPricing'
-import HostVanPhotos from './pages/Host/HostVans/HostVanPhotos'
+const Dashboard = React.lazy(() => import('./pages/Host/Dashboard/Dashboard'))
+const Income = React.lazy(() => import('./pages/Host/Income/Income'))
+const Reviews = React.lazy(() => import('./pages/Host/Reviews/Reviews'))
+const HostVans = React.lazy(() => import('./pages/Host/HostVans/HostVans'))
+const HostVanDetail = React.lazy(() => import('./pages/Host/HostVans/HostVanDetail'))
+const HostVanInfo = React.lazy(() => import('./pages/Host/HostVans/HostVanInfo'))
+const HostVanPricing = React.lazy(() => import('./pages/Host/HostVans/HostVanPricing'))
+const HostVanPhotos = React.lazy(() => import('./pages/Host/HostVans/HostVanPhotos'))
+
 
 import ScrollToTop from './components/ScrollToTop';
+import Spinner from './components/Spinner/Spinner';
 import AuthRequired from './components/AuthRequired';
 
 
@@ -33,6 +35,7 @@ function App() {
     <div className='wrapper'>
     <BrowserRouter>
       <ScrollToTop />
+      <React.Suspense fallback={<Spinner className='loading'/>}>
       <Routes>
         <Route path='/' element={<Layout/>}>
 
@@ -67,6 +70,7 @@ function App() {
         <Route path="*" element={<NotFound/>}/>
         </Route>
       </Routes>
+      </React.Suspense>
       <ToastContainer 
         position='top-center'
         autoClose={3000}

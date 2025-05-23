@@ -1,6 +1,7 @@
 import React from 'react'
 import './HostLayout.module.css'
 import { Outlet, NavLink } from 'react-router-dom'
+import Spinner from '../Spinner/Spinner'
 
 const HostLayout = () => {
 
@@ -16,7 +17,9 @@ const navLinkStyle = ({isActive}) => isActive ? "nav-link active" : "nav-link";
             <li><NavLink to={"reviews"} className={navLinkStyle}>Reviews</NavLink></li>
         </ul>
     </nav>
-    <Outlet/>
+    <React.Suspense fallback={<Spinner className="loading"/>}>
+      <Outlet/>
+    </React.Suspense>
     </>
   )
 }
