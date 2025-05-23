@@ -107,3 +107,13 @@ main {
   color: #FF8C38;
   font-size: 1.5rem;
 }
+
+:root .Toastify__toast {
+  font-size: 0.8rem !important;
+  font-weight: 500;
+  font-family: "Inter", sans-serif !important;
+}
+
+
+
+
