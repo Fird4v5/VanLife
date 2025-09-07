@@ -44,6 +44,21 @@
 
 .loginPage form button {
     margin-top: 1rem; 
+    width: 100%;
+    font-family: "Inter", sans-serif;
+    font-weight: 700; 
+    font-size: 1rem;
+    background-color: #FF8C38;
+    color: #fff; 
+    border: none;
+    border-radius: 5px;
+    padding: 0.8rem 0.5rem; 
+    cursor: pointer;
+}
+
+.loginPage form button:hover {
+    background: #ff7818;
+    transition: 0.25 ease;
 }
 
 .eyeIcon {

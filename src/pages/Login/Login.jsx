@@ -107,7 +107,6 @@ const handleChange = (e) => {
         required
       />
       <button 
-      className='orange-btn' 
       disabled={mutation.isLoading}>
         {mutation.isLoading ? 
         (isSignup ? 
