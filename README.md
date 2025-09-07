@@ -16,7 +16,8 @@ A van rental platform featuring a host dashboard with income, reviews, and van l
 ---
 
 ## 📸 Preview  
-<img width="2560" height="1600" alt="localhost_5173_(Nest Hub Max)-min" src="https://github.com/user-attachments/assets/d288d1ce-c4f5-4636-9b56-64d03f42e167" />
+<img width="2560" height="1600" alt="localhost_5173_(Nest Hub Max) (1)-min" src="https://github.com/user-attachments/assets/a22d4c90-1ef2-416e-af10-5bac4be83085" />
+
 
 
 ---
