@@ -27,4 +27,4 @@ dist-ssr
 
 
 src/server.js
-.env
+./.env
