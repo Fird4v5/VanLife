@@ -42,7 +42,7 @@
 }
 
 .van-list-direction button {
-    background-color: #161616;
+    background-color: #161616ec;
     color: #fff; 
     font-family: "Inter", sans-serif;
     font-weight: 700;
@@ -51,4 +51,8 @@
     border-radius: 10px;
     cursor: pointer;
     padding: 0.6rem 1rem;
+}
+
+.van-list-direction button:hover {
+    background-color: black; 
 }

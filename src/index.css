@@ -46,7 +46,7 @@ main {
 }
 
 .orange-btn {
-    width: 100%;
+    width: 50%;
     font-family: "Inter", sans-serif;
     font-weight: 700; 
     font-size: 1rem;
@@ -56,6 +56,13 @@ main {
     border-radius: 5px;
     padding: 0.8rem 0.5rem; 
     cursor: pointer;
+}
+
+.orange-btn:hover,
+.ornage-btn:focus {
+  background: #ff7818;
+  transition: 0.25 ease; 
+
 }
 
 

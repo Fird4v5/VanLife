@@ -16,7 +16,7 @@ const Navbar = () => {
             <li><NavLink to={"vans"} className={navLinkStyle}>Vans</NavLink></li>
             <li><NavLink to={"host"} className={navLinkStyle}>Host</NavLink></li>
             <li>
-              <NavLink to={"login"} className={`nav-link login`}>
+              <NavLink to={"login"} className={` login`}>
                   <img src={avatar} alt="login navigation icon"/>
               </NavLink>
             </li>
